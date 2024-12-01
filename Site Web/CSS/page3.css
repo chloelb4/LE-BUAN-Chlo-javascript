@@ -1,0 +1,212 @@
+/* réinitialisation des marges et bordures */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* header et footer en pleine largeur */
+header {
+    width: 100%;
+    background-color: #6E8A73;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    background-color: #6E8A73;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* footer aligné avec texte et icônes */
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icons img {
+    width: 40px;
+    background-color: #B7D3B5;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    width: 300px;
+    height: 40px;
+    background-color: #B7D3B5;
+    text-align: center;
+    line-height: 40px; /*espacement vertical */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding-inline: 13px; /* espacement intérieur horizontal */
+}
+
+a {
+    color: black;
+    text-decoration: none; /* pour enlever le surlignage et la couleur bleu de base des liens */
+}
+
+h1 {
+    font-size: 35px;
+    text-align: left;
+    color: #B7D3B5;
+    padding-inline: 30px;
+    align-self: center;
+}
+
+.justify-content-left {
+    display: flex;
+    justify-content: left;
+}
+
+.button {
+    width: 100px;
+    padding: 10px 0; /* espacement vertical interne */
+    background-color: #6E8A73;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; /* change le curseur lors du survol */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+/* style pour le block */
+.block {
+    background-color: #B7D3B5;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto; /* centre le conteneur horizontalement */
+    padding: 0 20px; /* espacement latéral */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* style du boutton darkmode différent des boutons normaux */
+#button-darkmode {
+    width: 60px;
+    padding: 4px 0;
+    background-color: #B7D3B5;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* darkmode */
+.dark {
+    background-color: black;
+}
+
+.dark header {
+    background-color: #405143;
+}
+
+.dark footer {
+    background-color: #405143;
+}
+
+.dark .footer-icons img {
+    background-color: #6E8A73;
+}
+
+.dark #button-darkmode {
+    background-color: #6E8A73;
+}
+
+.dark .button {
+    background-color: #405143;
+}
+
+.dark nav {
+    background-color: #6E8A73;
+}
+
+.dark h1 {
+    color: #6E8A73;
+}
+
+.dark form {
+    background-color: #6E8A73;
+}
+
+/* police de texte */
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* transition darkmode */
+body, header, footer, form, .button, #button-darkmode {
+    transition: background-color 0.3s ease
+}
+
+/* pour le formulaire d'inscription */
+form div {
+    display: flex;
+    justify-content: center;
+    margin: 30px 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.error {
+    border: 1px solid black;
+    color: black;
+    background-color: red;
+}
+
+.sucess {
+    border: 1px solid black;
+    color: black;
+    background-color: green;
+}

@@ -1,0 +1,336 @@
+/* réinitialisation des marges et bordures */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* header et footer en pleine largeur */
+header {
+    width: 100%;
+    background-color: #6E8A73;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    background-color: #6E8A73;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ajustement pour éviter le chevauchement du footer */
+.content-container {
+    padding-bottom: 80px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    width: 300px;
+    height: 40px;
+    background-color: #B7D3B5;
+    text-align: center;
+    line-height: 40px; /*espacement vertical */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding-inline: 13px; /* espacement intérieur horizontal */
+}
+
+a {
+    color: black;
+    text-decoration: none; /* pour enlever le surlignage et la couleur bleu de base des liens */
+}
+
+h1 {
+    font-size: 35px;
+    text-align: left;
+    color: #B7D3B5;
+    padding-inline: 30px;
+    align-self: center;
+}
+
+.justify-content-left {
+    display: flex;
+    justify-content: left;
+}
+
+/* section principale avec grille contenant deux groupes et une colonne vide centrale */
+.most-popular {
+    display: grid;
+    padding: 40px;
+    background-color:white;
+    column-gap: 40px; /* espace central */
+    flex: 1;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+/* titre pour chaque section (gauche et droite) */
+.section-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #6E8A73;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* chaque groupe d’images en grille de deux colonnes */
+.grid-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* deux colonnes par groupe */
+    gap: 20px; /* espace entre les images dans chaque groupe */
+}
+
+/* style pour chaque image, titre et paragraphe*/
+.grid-item {
+    text-align: center;
+    background-color: #B7D3B5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.grid-item h2 {
+    font-size: 15px;
+    background-color: #6E8A73;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.grid-item p {
+    font-size: 12px;
+}
+
+/* footer aligné avec texte et icônes */
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icons img {
+    width: 40px;
+    background-color: #B7D3B5;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.button {
+    width: 100px;
+    padding: 10px 0; /* espacement vertical interne */
+    background-color: #B7D3B5;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; /* change le curseur lors du survol */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+/* style du boutton darkmode différent des boutons normaux */
+#button-darkmode {
+    width: 60px;
+    padding: 4px 0;
+    background-color: #B7D3B5;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.short-drinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background-color:#6E8A73;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.long-drinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background-color:#6E8A73;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.sparkling {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background-color:#6E8A73;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.categories {
+    background-color: white;
+}
+
+.cartes {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* darkmode */
+.dark {
+    background-color: black;
+}
+
+.dark .most-popular {
+    background-color: black;
+}
+
+.dark header {
+    background-color: #405143;
+}
+
+.dark footer {
+    background-color: #405143;
+}
+
+.dark .section-title {
+    background-color: #405143;
+}
+
+.dark .grid-item h3 {
+    background-color: #405143;
+}
+
+.dark .footer-icons img {
+    background-color: #6E8A73;
+}
+
+.dark #button-darkmode {
+    background-color: #6E8A73;
+}
+
+.dark .button {
+    background-color: #6E8A73;
+}
+
+.dark nav {
+    background-color: #6E8A73;
+}
+
+.dark .grid-item {
+    background-color: #6E8A73;
+}
+
+.dark h1 {
+    color: #6E8A73;
+}
+
+.dark h2 {
+    background-color: #405143;
+}
+
+.dark .categories {
+    background-color: black;
+}
+
+.dark .short-drinks {
+    background-color: #405143;
+}
+
+.dark .long-drinks {
+    background-color: #405143;
+}
+
+.dark .sparkling {
+    background-color: #405143;
+}
+
+/* police de texte */
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* transition darkmode */
+body, header, footer, .short-drinks, .long-drinks, .sparkling, #button-darkmode {
+    transition: background-color 0.3s ease
+}
+
+/* pour le javascript => tabs */
+.tab-active {
+    color: #6E8A73;
+}
+
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}

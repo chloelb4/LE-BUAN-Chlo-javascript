@@ -1,0 +1,276 @@
+/* styles généraux que j'ai appliqués à l'ensemble de la page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* style pour que le header et le footer soient en pleine largeur */
+header, footer {
+    width: 100%; /* prend toute la largeur de la page */
+    background-color: #6E8A73;
+    padding: 20px; /* espacement intérieur */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;/* centre verticalement les éléments */
+    margin-bottom: 40px; /* espace sous le header */
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    justify-self: left;
+}
+
+nav {
+    width: 300px;
+    height: 40px;
+    background-color: #B7D3B5;
+    text-align: center;
+    line-height: 40px; /* espacement vertical */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding-inline: 13px; /* espacement intérieur horizontal */
+}
+
+a {
+    color: black;
+    text-decoration: none; /* pour enlever le surlignage et la couleur bleu de base des liens */
+}
+
+h1 {
+    font-size: 35px;
+    text-align: left;
+    color: #B7D3B5;
+    padding-inline: 30px;
+    align-self: center;
+}
+
+.justify-content-left {
+    display: flex;
+    justify-content: left;
+}
+
+/* conteneur principal centré et élargi */
+.content-container {
+    width: 90%;
+    margin: 0 auto; /* centre le conteneur horizontalement */
+    padding: 0 20px; /* espacement latéral */
+}
+
+/* style pour la bannière */
+.banner {
+    background-color: #B7D3B5;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+
+.banner h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 15px;
+}
+
+/* section de contenu principale en grille */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* deux colonnes égales */
+    grid-template-rows: auto auto; /* deux lignes pour organiser le contenu */
+    gap: 20px;
+    padding: 20px;
+    background-color: #B7D3B5;
+    border-radius: 5px; /* contours arrondis */
+}
+
+/* style de l'image principale située à gauche */
+.img-left img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* remplit le conteneur tout le temps */
+    border-radius: 5px;
+}
+
+/* bloc de texte central aligné à gauche et de taille égale */
+.center-text, .bottom-left {
+    background-color: #6E8A73;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: 150px; /* hauteur fixe pour garder une taille identique */
+}
+
+/* pour les différentes positions spécifiques dans la grille */
+.center-text {
+    grid-column: 2 / 3; /* position dans la grille */
+    grid-row: 1 / 2;
+}
+
+.bottom-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.center-text h3, .bottom-left h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.center-text p, .bottom-left p {
+    margin-bottom: 10px;
+}
+
+/* style de l'image secondaire située à droite */
+.img-right img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    grid-column: 2 / 3; /* position dans la grille */
+    grid-row: 2 / 3;
+}
+
+.button {
+    width: 100px;
+    padding: 10px 0; /* espacement vertical interne */
+    background-color: #B7D3B5;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; /* change le curseur lors du survol */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* style du boutton darkmode différent des boutons normaux */
+#button-darkmode {
+    width: 60px;
+    padding: 4px 0;
+    background-color: #B7D3B5;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ajustement du footer pour qu'il reste en bas */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icons img {
+    width: 40px;
+    height: auto;
+    background-color: #B7D3B5;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* darkmode */
+.dark {
+    background-color: black;
+}
+
+.dark header {
+    background-color: #405143;
+}
+
+.dark footer {
+    background-color: #405143;
+}
+
+.dark .content {
+    background-color: #6E8A73;
+}
+
+.dark .banner {
+    background-color: #6E8A73;
+}
+
+.dark .center-text {
+    background-color: #405143;
+}
+
+.dark .bottom-left {
+    background-color: #405143;
+}
+
+.dark #button-darkmode {
+    background-color:#6E8A73;
+}
+
+.dark nav {
+    background-color:#6E8A73;
+}
+
+.dark .button {
+    background-color: #6E8A73;
+}
+
+.dark .footer-icons img {
+    background-color:#6E8A73;
+}
+
+.dark h1 {
+    color: #6E8A73;
+}
+
+/* police de texte */
+.schoolbell-regular {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* transition darkmode */
+body, header, footer, .short-drinks, .long-drinks, .sparkling, #button-darkmode {
+    transition: background-color 0.3s ease
+}
